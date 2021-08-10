@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "../../../hack-hour-ftri-2"
+		},
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"remoteAuthority": "wsl+Ubuntu-20.04",
+	"settings": {}
+}

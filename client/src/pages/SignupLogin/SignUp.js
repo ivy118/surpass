@@ -14,13 +14,13 @@ import Oauth from './Oauth';
 
 const useStyles = makeStyles(theme => ({
   form: {
-    padding: theme.spacing(0, 1),
+    padding: theme.spacing(2,9),
     [theme.breakpoints.down('sm')]: {
-      padding: theme.spacing(0, 3),
+      padding: theme.spacing(2,6),
     },
-    [theme.breakpoints.up('lg')]: {
-      padding: theme.spacing(0, 9),
-    },
+  },
+  title: {
+    marginTop: theme.spacing(3)
   },
   usernameField: {
     paddingBottom: theme.spacing(1),
@@ -39,12 +39,14 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(3),
   },
   loginLink: {
-    margin: theme.spacing(2, 1),
+    margin: theme.spacing(3, 1),
   },
 }));
 
 // Initial form state for Formik/Yup
 const initialValues = {
+  firstName: '',
+  lastName: '',
   username: '',
   email: '',
   password: '',
@@ -53,6 +55,8 @@ const initialValues = {
 
 // Individual input requirements for validation
 const validationSchema = Yup.object({
+  firstName: Yup.string().required('Required'),
+  lastName: Yup.string().required('Required'),
   username: Yup.string().required('Required'),
   email: Yup.string().email('Enter a valid email').required('Required'),
   password: Yup.string()
@@ -72,10 +76,11 @@ const SignUp = ({ createNewUser, setHasAnAccount, hasAnAccount, history }) => {
   const onSubmit = async values => {
     try {
       const { data } = await axios.post('/user', {
+        firstName: values.firstName,
+        lastName: values.lastName,
         username: values.username,
         email: values.email,
         password: values.password,
-        passwordConfirmation: values.passwordConfirmation,
       });
       createNewUser(data.createdUser);
       history.push('/dashboard');
@@ -101,6 +106,28 @@ const SignUp = ({ createNewUser, setHasAnAccount, hasAnAccount, history }) => {
         Sign Up
       </Typography>
       <Oauth />
+      <TextField
+        className={classes.usernameField}
+        fullWidth
+        label="First Name"
+        variant="outlined"
+        {...formik.getFieldProps('firstName')}
+        onChange={formik.handleChange}
+        value={formik.values.firstName}
+        error={formik.errors.firstName && Boolean(formik.touched.firstName)}
+        helperText={formik.touched.firstName ? formik.errors.firstName : ''}
+      />
+      <TextField
+        className={classes.usernameField}
+        fullWidth
+        label="Last Name"
+        variant="outlined"
+        {...formik.getFieldProps('lastName')}
+        onChange={formik.handleChange}
+        value={formik.values.lastName}
+        error={formik.errors.lastName && Boolean(formik.touched.lastName)}
+        helperText={formik.touched.lastName ? formik.errors.lastName : ''}
+      />
       <TextField
         className={classes.usernameField}
         fullWidth

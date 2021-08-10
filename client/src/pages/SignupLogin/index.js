@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     backgroundPosition: 'center',
   },
   formContainer: {
-    height: '60vh',
+    minHeight: '60vh',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',

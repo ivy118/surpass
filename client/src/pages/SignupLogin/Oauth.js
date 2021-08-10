@@ -14,6 +14,9 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     width: '100%',
     marginBottom: theme.spacing(3),
+    '&:hover': {
+      backgroundColor: '#ffffffe0',
+    }
   },
   buttonText: {
     left: '20px'

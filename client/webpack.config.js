@@ -15,7 +15,7 @@ module.exports = {
     publicPath: '/build/',
     contentBase: path.join(__dirname, 'public'),
     proxy: {
-      '/user': 'http://localhost:3001',
+      '/api': 'http://localhost:3000/',
     },
     historyApiFallback: true,
   },

@@ -64,7 +64,7 @@ function Login({ loginUser, setHasAnAccount, hasAnAccount, history }) {
         passwordConfirmation: values.passwordConfirmation,
       });
       loginUser(verifiedUser);
-      history.push('/dashboard');
+      history.push('/home');
     } catch (error) {
       console.error('ERROR IN LOGIN EXISTING USER: ', error);
       // Figure out a way to display to the user that an error occured here.

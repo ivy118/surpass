@@ -27,7 +27,7 @@ export default function ButtonAppBar(props) {
   let history = useHistory()
 
   function handleClickHistory() {
-    history.push("/history");
+    history.push("/user");
   }
 
   return (

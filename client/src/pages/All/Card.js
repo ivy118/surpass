@@ -25,7 +25,7 @@ export default function MediaCard() {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="https://tailandfur.com/wp-content/uploads/2014/03/Funny-pictures-of-animals-41.jpg"
+          image="/static/images/cards/contemplative-reptile.jpg"
           title="Contemplative Reptile"
         />
         <CardContent>
@@ -39,12 +39,12 @@ export default function MediaCard() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        {/* <Button size="small" color="primary">
+        <Button size="small" color="primary">
           Share
         </Button>
         <Button size="small" color="primary">
           Learn More
-        </Button> */}
+        </Button>
       </CardActions>
     </Card>
   );

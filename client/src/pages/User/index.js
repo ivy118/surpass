@@ -16,8 +16,8 @@ export default function History() {
 
   return (
     <div>
-      <AppBar title='Past Challenges'/>
-      <Typography variant='h1' className={classes.sampleStyle}>Past Challenges Stats</Typography>
+      <AppBar title='Personal Info'/>
+      <Typography variant='h1' className={classes.sampleStyle}>Personal Info</Typography>
     </div>
   );
 }

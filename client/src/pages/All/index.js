@@ -2,6 +2,7 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '../../AppBar'
+import Card from './Card'
       
 
 
@@ -13,6 +14,8 @@ const useStyles = makeStyles(theme => ({
 
 export default function All() {
   const classes = useStyles();
+
+  const challenges = [['']]
 
   return (
     <div>

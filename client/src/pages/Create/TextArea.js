@@ -9,8 +9,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function MinHeightTextarea(props) {
+export default function MinHeightTextarea() {
   const classes = useStyles();
   
-  return <TextareaAutosize aria-label="minimum height" minRows={8} placeholder={props.info} className={classes.textWidth}/>;
+  return <TextareaAutosize aria-label="minimum height" minRows={8} placeholder="Minimum 3 rows" className={classes.textWidth}/>;
 }

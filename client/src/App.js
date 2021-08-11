@@ -6,6 +6,7 @@ import Create from '../src/pages/Create'
 import History from '../src/pages/History'
 import SignupLogin from '../src/pages/SignupLogin';
 import { makeStyles } from '@material-ui/styles';
+import User from './pages/User'
 
 const useStyles = makeStyles(theme => ({
   app_root: {
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/create" component={Create} />
           <Route path="/history" component={History} />
           <Route path="/home" component={Home} />
+          <Route path="/user" component={User} />
           <Route exact path="/" component={SignupLogin} />
         </Switch>
       </Router>

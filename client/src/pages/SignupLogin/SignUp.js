@@ -83,7 +83,7 @@ const SignUp = ({ createNewUser, setHasAnAccount, hasAnAccount, history }) => {
         password: values.password,
       });
       createNewUser(data.createdUser);
-      history.push('/dashboard');
+      history.push('/home');
     } catch (error) {
       console.error('ERROR IN CREATING NEW USER: ', error);
       // TODO: Figure out a way to display to the user that an error occured here.

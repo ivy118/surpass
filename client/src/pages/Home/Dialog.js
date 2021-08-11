@@ -78,7 +78,8 @@ export default function FullScreenDialog(props) {
         </AppBar>
         <div className={classes.flex}>
           <div className={classes.form}>
-            <TextArea />
+            <TextArea info='Entry Day'/>
+            <TextArea info='Entry Description'/>
             <Button variant='contained' color='primary'>Submit entry</Button>
           </div>
           <TimeLine />

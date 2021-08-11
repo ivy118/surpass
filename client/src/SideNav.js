@@ -16,6 +16,7 @@ import CreateIcon from '@material-ui/icons/Create';
 import PageviewIcon from '@material-ui/icons/Pageview';
 import Avatar from './Avatar'
 import { useHistory } from 'react-router';
+import HistoryIcon from '@material-ui/icons/History';
 
 const useStyles = makeStyles({
   list: {
@@ -53,7 +54,7 @@ export default function TemporaryDrawer() {
   }
 
   function handleClickHome() {
-    history.push("/");
+    history.push("/home");
   }
 
   function handleClickHistory() {
@@ -88,9 +89,9 @@ export default function TemporaryDrawer() {
       </List>
       <Divider />
       <List>
-        {['User Profile'].map((text, index) => (
+        {['Past Challenges'].map((text, index) => (
           <ListItem button key={text} onClick={handleClickHistory}>
-            <ListItemIcon>{index % 2 === 0 ? <Avatar /> : <MailIcon />}</ListItemIcon>
+            <ListItemIcon>{index % 2 === 0 ? <HistoryIcon /> : <Avatar />}</ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
         ))}
